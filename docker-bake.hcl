@@ -8,26 +8,25 @@ target "v2fly" {
    platforms = [
       "linux/amd64",
       "linux/arm64",
-      "linux/arm/v6",
       "linux/arm/v7"
    ]
    tags = [
-      // "docker.io/kotaimen/v2fly:4",
-      "777337120655.dkr.ecr.cn-north-1.amazonaws.com.cn/cyril-playground:v2fly"
+      "docker.io/kotaimen/v2fly:v4",
    ]
 }
 
 target "cloak" {
    context = "cloak"
    dockerfile = "Dockerfile"
+   args = {
+      CLOAK_VERSION = "2.6.1"
+   }
    platforms = [
       "linux/amd64",
       "linux/arm64",
-      "linux/arm/v6",
       "linux/arm/v7"
    ]
    tags = [
-      // "docker.io/kotaimen/cloak:2"
-      "777337120655.dkr.ecr.cn-north-1.amazonaws.com.cn/cyril-playground:cloak"
+      "docker.io/kotaimen/cloak:v2",
    ]
 }

@@ -25,4 +25,5 @@ COPY --from=build /build/Cloak/ck-client /bin/
 COPY --from=build /build/Cloak/example_config/ckclient.json /etc/cloak/ckclient.json
 COPY --from=build /build/Cloak/example_config/ckserver.json /etc/cloak/ckserver.json
 
+# By default, start as a lient
 ENTRYPOINT [ "ck-client", "-c", "/etc/cloak/ckclient.json", "-i", "0.0.0.0", "-l", "1984"]

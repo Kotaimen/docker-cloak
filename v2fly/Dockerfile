@@ -2,8 +2,6 @@ FROM public.ecr.aws/docker/library/golang:1.17-alpine AS build
 
 WORKDIR /build
 
-# ENV HTTPS_PROXY http://10.90.1.52:3129
-
 RUN apk add --no-cache \
   git wget \
   gcc musl-dev
