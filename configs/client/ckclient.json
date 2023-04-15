@@ -1,0 +1,11 @@
+{
+  "Transport": "direct",
+  "ProxyMethod": "shadowsocks",
+  "EncryptionMethod": "plain",
+  "UID": "npq8NGKOU11idmqrq8A1MA==",
+  "PublicKey": "psW1RiyVZDYmHbl4eTxC8H4QcLPoBbSz7onlt5w3SU0=",
+  "ServerName": "www.amazon.com",
+  "NumConn": 4,
+  "BrowserSig": "chrome",
+  "StreamTimeout": 300
+}
