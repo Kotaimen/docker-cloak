@@ -9,8 +9,7 @@
     ":443",
     ":80"
   ],
-  "BypassUID": [
-  ],
+  "BypassUID": [],
   "RedirAddr": "www.amazon.com",
   "PrivateKey": "MMcSIc2FOH6QRDQdbW8MNZMSmtZ5gcEGFJAWHUcDInw=",
   "AdminUID": "npq8NGKOU11idmqrq8A1MA==",

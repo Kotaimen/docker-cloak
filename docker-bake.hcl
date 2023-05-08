@@ -11,7 +11,8 @@ target "v2fly" {
       "linux/arm/v7"
    ]
    tags = [
-      "docker.io/kotaimen/v2fly:v4",
+      "docker.io/kotaimen/cloak:v4",
+      "396652809164.dkr.ecr.cn-north-1.amazonaws.com.cn/v2fly:v4",
    ]
 }
 
@@ -19,7 +20,7 @@ target "cloak" {
    context = "cloak"
    dockerfile = "Dockerfile"
    args = {
-      CLOAK_VERSION = "2.6.1"
+      CLOAK_VERSION = "2.7.0"
    }
    platforms = [
       "linux/amd64",
@@ -28,5 +29,6 @@ target "cloak" {
    ]
    tags = [
       "docker.io/kotaimen/cloak:v2",
+      "396652809164.dkr.ecr.cn-north-1.amazonaws.com.cn/cloak:v2",
    ]
 }
