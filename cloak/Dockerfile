@@ -4,8 +4,6 @@ ARG CLOAK_VERSION=2.6.1
 
 WORKDIR /build
 
-# ENV HTTPS_PROXY http://10.90.1.52:3129
-
 RUN apk add --no-cache git
 RUN git clone --depth 1 --branch v${CLOAK_VERSION} https://github.com/cbeuw/Cloak.git
 
@@ -16,7 +14,6 @@ RUN go get ./...
 RUN mkdir -p build_assets && \
   go build -ldflags "-X main.version=${CLOAK_VERSION}" ./cmd/ck-client && \
   go build -ldflags "-X main.version=${CLOAK_VERSION}" ./cmd/ck-server 
-
 
 FROM public.ecr.aws/docker/library/alpine:3
 

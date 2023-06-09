@@ -1,18 +1,10 @@
-group "default" {
-	targets = ["v2fly", "cloak"]
+variable "CLOAK_VERSION" {
+   default = "2.7.0"
 }
 
-target "v2fly" {
-   context = "v2fly"
-   dockerfile = "Dockerfile"
-   platforms = [
-      "linux/amd64",
-      "linux/arm64",
-      "linux/arm/v7"
-   ]
-   tags = [
-      "docker.io/kotaimen/cloak:v4",
-      "396652809164.dkr.ecr.cn-north-1.amazonaws.com.cn/v2fly:v4",
+group "default" {
+   targets = [
+      "cloak"
    ]
 }
 
@@ -20,7 +12,7 @@ target "cloak" {
    context = "cloak"
    dockerfile = "Dockerfile"
    args = {
-      CLOAK_VERSION = "2.7.0"
+      CLOAK_VERSION = "${CLOAK_VERSION}"
    }
    platforms = [
       "linux/amd64",
@@ -28,7 +20,6 @@ target "cloak" {
       "linux/arm/v7"
    ]
    tags = [
-      "docker.io/kotaimen/cloak:v2",
-      "396652809164.dkr.ecr.cn-north-1.amazonaws.com.cn/cloak:v2",
+      "docker.io/kotaimen/cloak:${CLOAK_VERSION}",
    ]
 }

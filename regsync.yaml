@@ -1,0 +1,31 @@
+# 396652809164
+# 470086494900
+
+version: 1
+creds:
+  - registry: 396652809164.dkr.ecr.cn-north-1.amazonaws.com.cn/cloak
+    user: "AWS"
+    pass: "{{env \"ECR_PASSWORD1\"}}"
+  - registry: 470086494900.dkr.ecr.cn-north-1.amazonaws.com.cn/cloak
+    user: "AWS"
+    pass: "{{env \"ECR_PASSWORD2\"}}"
+defaults:
+  ratelimit:
+    min: 10
+    retry: 15m
+  parallel: 1
+sync:
+  - source: kotaimen/cloak
+    target: 396652809164.dkr.ecr.cn-north-1.amazonaws.com.cn/cloak
+    type: repository
+    interval: 60m
+    tags:
+      allow:
+      - "2.7.0"
+  - source: kotaimen/cloak
+    target: 470086494900.dkr.ecr.cn-north-1.amazonaws.com.cn/cloak
+    type: repository
+    interval: 60m
+    tags:
+      allow:
+      - "2.7.0"
