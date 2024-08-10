@@ -1,5 +1,5 @@
 variable "CLOAK_VERSION" {
-   default = "2.7.0"
+   default = "2.9.0"
 }
 
 group "default" {
@@ -17,7 +17,6 @@ target "cloak" {
    platforms = [
       "linux/amd64",
       "linux/arm64",
-      "linux/arm/v7"
    ]
    tags = [
       "docker.io/kotaimen/cloak:${CLOAK_VERSION}",

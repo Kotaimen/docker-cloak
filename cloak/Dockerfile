@@ -1,6 +1,6 @@
-FROM public.ecr.aws/docker/library/golang:1.17-alpine AS build
+FROM public.ecr.aws/docker/library/golang:1.22-alpine AS build
 
-ARG CLOAK_VERSION=2.6.1
+ARG CLOAK_VERSION=2.9.0
 
 WORKDIR /build
 
