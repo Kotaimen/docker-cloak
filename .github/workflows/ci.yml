@@ -3,7 +3,7 @@ name: Build and Push
 on:
   push:
     branches:
-      - main
+      - master
 
 env:
   CLOAK_VERSION: 2.9.0
