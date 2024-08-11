@@ -19,6 +19,6 @@ target "cloak" {
       "linux/arm64",
    ]
    tags = [
-      "docker.io/kotaimen/cloak:${CLOAK_VERSION}",
+      "ghcr.io/kotaimen/cloak:${CLOAK_VERSION}",
    ]
 }
