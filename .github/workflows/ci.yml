@@ -4,9 +4,15 @@ on:
   push:
     branches:
       - master
-
+  workflow_dispatch:
+    inputs:
+      cloak_version:
+        description: 'Cloak Version'
+        required: false
+        type: string
+    
 env:
-  CLOAK_VERSION: 2.9.0
+  CLOAK_VERSION: ${{ inputs.cloak_version || vars.CLOAK_VERSION }}
 
 permissions:
   contents: read
