@@ -1,5 +1,5 @@
 variable "CLOAK_VERSION" {
-   default = "2.9.0"
+   default = "2.11.0"
 }
 
 group "default" {
